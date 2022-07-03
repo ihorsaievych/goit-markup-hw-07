@@ -2,35 +2,30 @@
     background-color: var(--main-backgroundcolor);
     border-bottom: 1px solid #ececec;
     height: 80px;
-    &-nav {
+    &__nav {
       display: flex;
       align-content: center;
       height: 80px;
     }
-    &-list {
+    &__list {
       display: flex;
       margin: 0 auto;
     }
-    &-item {
+    &__item {
       display: flex;
       align-content: center;
       &:not(:last-child) {
         margin-right: 50px;
       }
-    }
-    &-contacts-list {
-      display: flex;
-      align-content: center;
-    }
-    &-contacts-item {
-      display: flex;
-      align-content: center;
-      color: var(--second-color);
-      &:not(:last-child) {
-        margin-right: 50px;
+      &--muting{
+        color: var(--second-color);
       }
     }
-    &-link {
+    &__contacts {
+      display: flex;
+      align-content: center;
+    }
+    &__link {
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 500;
@@ -44,35 +39,25 @@
       &:focus {
         color: var(--accent-color);
       }
+      &--contact {
+        color: var(--second-color);
+        padding-bottom: 32px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }     
     }
-    &-currentlink {
+    &__currentlink {
       display: flex;
       flex-direction: column;
       color: var(--accent-color);
       border-bottom: 4px solid var(--accent-color);
     }
-    &-contact {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 500;
-      line-height: 1.14;
-      letter-spacing: 0.02em;
-      color: var(--second-color);
-      padding-top: 32px;
-      padding-bottom: 32px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      &-icon {
-        fill: currentColor;
-        width: 16px;
-        height: 16px;
-      }
-      &:hover,
-      &:focus {
-        color: var(--accent-color);
-      }
+
+    &__icon {
+      fill: currentColor;
+      width: 16px;
+      height: 16px;
     }
     .container {
       display: flex;
